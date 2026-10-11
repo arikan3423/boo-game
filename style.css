@@ -1,0 +1,189 @@
+
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+/* PAGE BACKGROUND */
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    background: linear-gradient(
+        180deg,
+        #110b1d 0%,
+        #251632 50%,
+        #110b1d 100%
+    );
+
+    font-family: Georgia, serif;
+    color: #ffe0b2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+}
+
+/* GAME CONTAINER */
+
+.game-container {
+    width: 100%;
+    max-width: 1100px;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+/* GAME TITLE */
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+
+    color: #ffcc99;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 10px #ff9933,
+        0 0 25px #663366;
+}
+
+/* GAME WRAPPER */
+
+.game-wrapper {
+    width: 100%;
+    max-width: 960px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GAME CANVAS */
+
+#gameCanvas {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 16 / 9;
+
+    background-color: #24152f;
+
+    border: 3px solid #a77b8c;
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 20px rgba(177, 111, 161, 0.4),
+        0 0 50px rgba(0, 0, 0, 0.6);
+
+    touch-action: none;
+}
+
+/* GAME CONTROLS */
+
+.game-controls {
+    margin-top: 20px;
+}
+
+.game-controls p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+
+    color: #d8bfd8;
+
+    letter-spacing: 1px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .game-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .game-controls p {
+        font-size: 14px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    body {
+        align-items: center;
+    }
+
+    .game-container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .game-wrapper {
+        width: 100%;
+    }
+
+    #gameCanvas {
+        aspect-ratio: 3 / 4;
+
+        border-radius: 12px;
+        border-width: 2px;
+    }
+
+    .game-controls {
+        margin-top: 15px;
+    }
+
+    .game-controls p {
+        font-size: 13px;
+        letter-spacing: 0;
+    }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 380px) {
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .game-container {
+        padding: 5px;
+    }
+
+    .game-controls p {
+        font-size: 12px;
+    }
+}
